@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHY SO SERIOUS</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon/clown.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/libs/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css" />
+  </head>
+
+  <body class="bg-black text-white">
+    <!-- Agregamos la capa de fondo negro y el botón -->
+    <div id="overlay">
+    <!-- From Uiverse.io by cssbuttons-io -->
+      <button class="btn-lg" id="button">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> ??? </span>
+      </button>
+    </div>
+
+    <!-- Agregamos el audio "whysoserious" -->
+    <audio
+      id="jonkler-why-so-serious"
+      src="assets/audio/whysoserious.mp3"
+      preload="auto"
+    ></audio>
+    <!-- Agregamos el audio "GETOUT" -->
+    <audio
+      id="getout-sound"
+      src="assets/audio/GETOUT.mp3"
+      preload="auto"
+    ></audio>
+
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <h1 class="creepster-regular text-bold" id="jonkler-txt">&nbsp;</h1>
+      <img
+        class="animate__animated animate__flip animate__faster animate__infinite hide"
+        id="jonkler-img"
+        src="assets/img/THE-GREATEST-JONKLER.png"
+        alt="Jonkler"
+      />
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
