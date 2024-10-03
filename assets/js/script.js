@@ -1,4 +1,4 @@
-// Obtener los elementos
+// Get elements
 const overlay = document.getElementById("overlay");
 const button = document.getElementById("button");
 const whySoSound = document.getElementById("jonkler-why-so-serious");
@@ -6,66 +6,64 @@ const getOutSound = document.getElementById("getout-sound");
 const jonklertxt = document.getElementById("jonkler-txt");
 const jonklerImg = document.getElementById("jonkler-img");
 
-// Agregar listener de eventos al botón
+// Add event listener to button
 button.addEventListener("click", handleButtonClick);
 
-// Función para manejar el clic del botón
+// Function to handle button click
 function handleButtonClick() {
-  // Alternar pantalla completa
-  enableFullScreen();
+  // Toggle full screen
+  toggleFullScreen();
 
-  // Alternar visibilidad del overlay
+  // Toggle overlay visibility
   overlay.style.display = "none";
 
-  // Reproducir WHY SO SERIOUS? con tasa de reproducción modificada
+  // Play WHY SO SERIOUS? with modified playback rate
   whySoSound.playbackRate = 1.5;
   whySoSound.play();
 
-  // Cambiar el texto a "WHY SO SERIOUS?"
+  // Change Jonkler text
   changeJonklerText();
 
-  // Mostrar la imagen de Jonkler
+  // Show Jonkler image
   setTimeout(showJonklerImage, 1050);
 
-  // Reproducir GET OUT y cerrar pestaña
+  // Play GET OUT and close tab
   setTimeout(playGetOutSound, 6900);
 }
 
-// Función para alternar pantalla completa
-function enableFullScreen() {
-  if (!document.fullscreenElement || fullscreenEnabled == true) {
-    // Solicitar pantalla completa
+// Function to set full screen
+function toggleFullScreen() {
+  if (!document.fullscreenElement || document.fullscreenEnabled == true) {
     document.documentElement.requestFullscreen();
-  } else {
-    // Si no se puede habilitar la pantalla completa, se imprime un registro en la consola
-    console.log("No se puede habilitar la pantalla completa");
   }
 }
 
-// Función para cambiar el texto a "WHY SO SERIOUS?"
+// Function to change Jonkler text
 function changeJonklerText() {
-  const jonklertxt = document.getElementById("jonkler-txt");
+  const texts = ["why", "why so", "why so serious?"];
+  let counter = 0;
 
-  let contador = 0;
-  const arrayTextos = ["why", "why so", "why so serious?"]; // array de textos a cambiar
-  let intervalId = null;
-
-  intervalId = setInterval(function () {
-    jonklertxt.textContent = arrayTextos[contador];
-    contador++;
-    if (contador >= arrayTextos.length) {
+  const intervalId = setInterval(() => {
+    jonklertxt.textContent = texts[counter];
+    counter++;
+    if (counter >= texts.length) {
       clearInterval(intervalId);
     }
-  }, 200); // Cambiar cada 0.2 segundos
+  }, 200);
 }
 
-// Función para mostrar al Jonkler
+// Function to show Jonkler image
 function showJonklerImage() {
   jonklerImg.classList.remove("hide");
 }
 
-// Función para reproducir GET OUT y luego cerrar la ventana
+// Function to play GET OUT and close tab
 function playGetOutSound() {
   getOutSound.play();
-  setTimeout(close, 400);
+  setTimeout(closeTab, 400);
+}
+
+// Function to close tab
+function closeTab() {
+  window.close();
 }
