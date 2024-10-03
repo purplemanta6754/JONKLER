@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+  <!-- Set the document language and theme -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WHY SO SERIOUS</title>
+    <!-- Set the favicon -->
     <link
       rel="shortcut icon"
       href="assets/img/favicon/clown.png"
       type="image/png"
     />
+    <!-- Link to custom CSS styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Link to external CSS libraries -->
     <link rel="stylesheet" href="assets/css/libs/animate.min.css" />
     <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css" />
   </head>
 
   <body class="bg-black text-white">
-    <!-- Agregamos la capa de fondo negro y el botón -->
+    <!-- Overlay container -->
     <div id="overlay">
-    <!-- From Uiverse.io by cssbuttons-io -->
+      <!-- Button component from Uiverse.io by cssbuttons-io -->
       <button class="btn-lg" id="button">
         <span class="shadow"></span>
         <span class="edge"></span>
@@ -25,21 +29,24 @@
       </button>
     </div>
 
-    <!-- Agregamos el audio "whysoserious" -->
+    <!-- Audio elements -->
     <audio
       id="jonkler-why-so-serious"
       src="assets/audio/whysoserious.mp3"
       preload="auto"
     ></audio>
-    <!-- Agregamos el audio "GETOUT" -->
+
     <audio
       id="getout-sound"
       src="assets/audio/GETOUT.mp3"
       preload="auto"
     ></audio>
 
+    <!-- Centered container -->
     <div class="position-absolute top-50 start-50 translate-middle">
+      <!-- Headline text -->
       <h1 class="creepster-regular text-bold" id="jonkler-txt">&nbsp;</h1>
+      <!-- Image element -->
       <img
         class="animate__animated animate__flip animate__faster animate__infinite hide"
         id="jonkler-img"
@@ -47,6 +54,8 @@
         alt="Jonkler"
       />
     </div>
+
+    <!-- Script tag for custom JavaScript -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
