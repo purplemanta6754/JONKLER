@@ -12,7 +12,7 @@ button.addEventListener("click", handleButtonClick);
 // Función para manejar el clic del botón
 function handleButtonClick() {
   // Alternar pantalla completa
-  toggleFullScreen();
+  enableFullScreen();
 
   // Alternar visibilidad del overlay
   overlay.style.display = "none";
@@ -32,13 +32,13 @@ function handleButtonClick() {
 }
 
 // Función para alternar pantalla completa
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
+function enableFullScreen() {
+  if (!document.fullscreenElement || fullscreenEnabled == true) {
     // Solicitar pantalla completa
     document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    // Salir de pantalla completa
-    document.exitFullscreen();
+  } else {
+    // Si no se puede habilitar la pantalla completa, se imprime un registro en la consola
+    console.log("No se puede habilitar la pantalla completa");
   }
 }
 
