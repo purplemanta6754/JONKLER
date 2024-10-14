@@ -18,6 +18,13 @@ h1 {
   display: none;
 }
 
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
 #overlay {
   position: fixed;
   top: 0;
