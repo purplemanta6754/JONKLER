@@ -38,6 +38,13 @@ function toggleFullScreen() {
   }
 }
 
+// Function to hide the cursor while the browser is in fullscreen mode
+function handleFullscreenChange() {
+  document.documentElement.style.cursor = document.fullscreenElement ? "none" : "auto";
+}
+
+document.addEventListener("fullscreenchange", handleFullscreenChange);
+
 // Function to change Jonkler text
 function changeJonklerText() {
   const texts = ["why", "why so", "why so serious?"];
